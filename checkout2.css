@@ -1,12 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    
+}
+nav{
+    flex:1;
+    text-align: right;
+    font-size: 1.3rem;
+    
+   
+   
+}
+nav ul{
+    display:inline-block;
+    list-style-type: none;
+
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+   
+  
+}
+ ul li a{
+    display: inline-block;
+    margin-right: 20px;
+   font-size: 1.6em;
+     color:#781D42;
+  
+}
+/* a{
+    text-decoration: none; */
+   
+
 :root{
-   --blue:#2980b9;
-   --red:rgb(226, 28, 28);
+   --blue:#b98929;
+   --red:#DEA057
    --orange:orange;
    --black:rgb(26, 23, 23);
    --white:#fff;
-   --bg-color:#eee;
+   --bg-color:#FEFBF3;
    --dark-bg:rgba(0,0,0,.7);
    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
    --border:.1rem solid #999;
@@ -40,14 +77,14 @@ section{
    text-align: center;
    font-size: 3.5rem;
    text-transform: uppercase;
-   color:var(--black);
+   color:#8E3200;
    margin-bottom: 2rem;
 }
 
 .btn,
 .option-btn,
 .delete-btn{
-   display: block;
+   /* display: block; */
    width: 100%;
    text-align: center;
    background-color: var(--blue);
@@ -62,7 +99,7 @@ section{
 .btn:hover,
 .option-btn:hover,
 .delete-btn:hover{
-   background-color: var(--black);
+   background-color:#A2416B;
 }
 
 .option-btn i,
@@ -314,7 +351,7 @@ section{
 .checkout-form form{
    padding:2rem;
    border-radius: .5rem;
-   background-color: var(--bg-color);
+   background-color: #FEFBF3; 
 }
 
 .checkout-form form .flex{
@@ -366,10 +403,10 @@ section{
    color:var(--black);
    margin:.5rem;
 }
-
+/* /////////////////////////////////////////////////////////////// */
 .display-order span.grand-total{
    width: 100%;
-   background-color: var(--red);
+   background-color: #DEA057;
    color:var(--white);
    padding:1rem;
    margin-top: 1rem;
