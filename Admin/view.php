@@ -42,7 +42,8 @@
                     $sql = "SELECT * FROM register;";
                     if($result = mysqli_query($conn, $sql)){
                         if(mysqli_num_rows($result) > 0){
-                            echo '<table class="table table-bordered table-striped" style="width: 20%; height: 10%;">';
+                            echo '<div class="table-responsive"> ';
+                               echo '<table class="table table-bordered table-striped" style="width: 20%; height: 10%;">';
                                 echo "<thead>";
                                     echo "<tr>";
                                         echo "<th>#</th>";

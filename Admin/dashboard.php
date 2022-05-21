@@ -54,7 +54,7 @@ font-family: 'Patrick Hand', cursive;">
                 <div class="category-content">
                     <ul id="fruits-nav" class="nav flex-column">
                     <li class="nav-item">
-                            <a href="view.php" class="nav-link" target="iframe">
+                            <a href="view.html" class="nav-link" target="iframe">
                             <i class="far fa-eye"></i>
                                 view User
                             </a>
