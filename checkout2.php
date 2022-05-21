@@ -161,7 +161,7 @@ if(isset($_POST['order_btn'])){
     <!-- Footer -->
     <footer
             class="text-center text-lg-start text-white"
-            style="background-color: #929fba"
+            style="background-color: #F9DFDC"
             >
       <!-- Grid container -->
       <div class="container p-4 pb-0">
@@ -280,7 +280,7 @@ if(isset($_POST['order_btn'])){
       <!-- Grid container -->
   
       <!-- Copyright -->
-      <div
+      <!-- <div
            class="text-center p-3"
            style="background-color: rgba(0, 0, 0, 0.2)"
            >
@@ -288,7 +288,7 @@ if(isset($_POST['order_btn'])){
         <a class="text-white" href="https://mdbootstrap.com/"
            >MDBootstrap.com</a
           >
-      </div>
+      </div> -->
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
