@@ -1,0 +1,7 @@
+.commentbox{
+    width:300px ;
+    padding:15px;
+    margin-bottom: 5px;
+    background-color: rgba(253, 237, 237, 0.425);
+    border-radius: 5px;
+}

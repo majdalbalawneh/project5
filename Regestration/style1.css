@@ -1,0 +1,142 @@
+body {
+    font-weight: 400;
+    /* margin-top: 2%; */
+    }
+    
+    .navbar{
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        color: #000;
+    }
+    nav{
+        flex:1;
+        text-align: right;
+        font-size: 1.5rem;
+       
+    }
+    nav ul{
+        display:inline-block;
+        list-style-type: none;
+    }
+    nav ul li{
+        display: inline-block;
+        margin-right: 20px;
+    }
+    
+    
+    
+    h1{position: absolute;}
+    
+    
+    
+    
+    
+    
+    
+    fieldset{ width: 40%;
+         margin-top: 2%;
+         margin-left: 30%;
+         border-bottom-left-radius:30px;
+         border-top-right-radius:30px;
+         border: 2px solid darkred;
+         /* border-bottom-right-radius: 25px;  */
+    }
+    .legend{font-size:xx-large;color: red; text-align: center;}
+    
+    strong{font-size:40px;color: goldenrod;}
+    
+    .reg-label{font-size:20px;
+        font-weight: bold;
+        color: green;
+    }
+    
+    .txt{font-size: 20px;}
+    .anima{width: 200px; height: 200px;
+         position: absolute;  
+        }
+    .tt{margin-top: 3%;
+        margin-left:5%;}
+    
+    .bb{margin-top: 44%;
+        margin-left:80%;}
+    
+    /* .txt{text-align: center;} */
+    
+    input{ border-radius:8px; 
+            border: 2px solid royalblue;
+            width:50%;
+            font-size: large;padding: 5px;
+            /* margin-left:20%; */
+            }
+            input, .reg-lbl, .reg-span, .link {margin-left:20%;}
+    
+    .welc{text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 5px;
+        color: rgb(215, 62, 113);
+    }
+    
+    span .link{color: gray; font-size: 18px; font-weight: bold;}
+    span .link a {text-decoration: none;}
+    span .link a:hover{color: orangered;}
+    
+    
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+        
+        .anima{width: 80px; height: 100px;  }
+        .tt{margin-top: 3%;
+            margin-left:3%;}
+        
+        .bb{display: none;}
+    }
+    
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+        .anima{width: 100px; height: 100px;  }
+        .tt{margin-top: 3%;
+            margin-left:3%;}
+        
+        .bb{margin-top: 44%;
+            margin-left:60%;}
+    
+    }
+    
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+        .anima{width: 100px; height: 100px;  }
+        .tt{margin-top: 3%;
+            margin-left:3%;}
+        
+        .bb{margin-top: 44%;
+            margin-left:76%;}
+    
+    }
+    
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        
+        .anima{width: 200px; height: 200px;
+            position: absolute;  
+           }
+       .tt{margin-top: 3%;
+           margin-left:5%;}
+       
+       .bb{margin-top: 44%;
+           margin-left:80%;}
+    }
+    
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        
+        .anima{width: 200px; height: 200px;
+            position: absolute;  
+           }
+       .tt{margin-top: 3%;
+           margin-left:5%;}
+       
+       .bb{margin-top: 44%;
+           margin-left:80%;}
+    }

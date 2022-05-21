@@ -147,8 +147,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                 }else{
                         // URL doesn't contain valid id. Redirect to error page
-                        // header("location: error.php");
-                        echo "Erorr Data";
+                        header("location: error.php");
                         exit();
                     }
                     
@@ -164,8 +163,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_close($conn);
         }  else{
             // URL doesn't contain id parameter. Redirect to error page
-            // header("location: error.php");
-            echo "Erorr Data";
+            header("location: error.php");
             exit();
         }
     }
@@ -177,7 +175,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>Update Record</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/admin.css">
     <style>
         .wrapper{
             width: 600px;
@@ -242,7 +239,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         </div>
                         <input type="hidden" name="id" value="<?php echo $id; ?>"/>
                         <input type="submit" class="btn btn-primary" value="Submit">
-                        <a href="Admin.php" class="btn btn-secondary ml-2">Cancel</a>
+                        <a href="./Admin.php" class="btn btn-secondary ml-2">Cancel</a>
                     </form>
                 </div>
             </div>        

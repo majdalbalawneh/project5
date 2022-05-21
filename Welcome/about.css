@@ -1,0 +1,112 @@
+.about {
+    padding: 79px 0;
+}
+
+.about .heading h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 3%;
+
+}
+
+.about .heading h2 span {
+    color: hwb(352 26% 5%);
+}
+
+.about .heading p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #999999;
+    margin: 20px 0 60px;
+    padding: 0;
+}
+
+.about h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.about p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #999999;
+    margin: 20px 0 15px;
+    padding: 0;
+}
+
+.about h4 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 8px 0;
+}
+
+.about h4 i {
+    color: hwb(352 26% 5%);
+    margin-right: 10px;
+}
+#about-us-section{
+    color: hwb(352 26% 5%);
+}
+
+
+.news{
+    padding: 4.8px 0 9.6px 0;
+  text-align: center;
+  }
+  .news-heading{
+    font-size: 20px;
+    line-height: 1.4;
+    
+    color: #333;
+  }
+  .news p{
+    font-size: 18px;
+    margin-bottom: 16px;
+    margin-top: 12px;
+    line-height: 1.8;
+    
+  }
+  
+  input[type="email"]{
+    display: inline-block;
+    width: 60%;
+    padding: 18px 36px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    height: 70px;
+    margin-top: 18px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.06); 
+  
+  }
+  input,
+  input::-webkit-input-placeholder {
+      font-size: 16px;
+      line-height: 3;
+  }
+  
+  .bt {
+    margin-left: -160px;
+      font-size: 16px;
+      display: inline-block;
+      font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 20px;
+  
+    /* Only necessary for .btn */
+    border: none;
+    cursor: pointer;
+    background-color:#dc3545;
+    color: #fff;
+  }
+  .news-letter{
+      margin-top: 4%;
+  }

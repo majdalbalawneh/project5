@@ -45,8 +45,6 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     <meta charset="UTF-8">
     <title>Delete Record</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/admin.css">
-
     <style>
         .wrapper{
             width: 600px;
@@ -66,7 +64,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                             <p>Are you sure you want to delete this employee record?</p>
                             <p>
                                 <input type="submit" value="Yes" class="btn btn-danger">
-                                <a href="Admin.php" class="btn btn-secondary">No</a>
+                                <a href="index.php" class="btn btn-secondary">No</a>
                             </p>
                         </div>
                     </form>

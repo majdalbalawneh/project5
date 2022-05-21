@@ -1,8 +1,6 @@
 <?php
 // Include config file
-// include_once '../Configration/connection.php';
- include_once '../connection.php';
-
+include_once '../Configration/connection.php';
  
 // Define variables and initialize with empty values
 $fname= $sname = $lname = $dob = $phone = $email = $pass = $con_pass = "";
