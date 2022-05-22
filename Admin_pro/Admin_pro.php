@@ -52,8 +52,8 @@
                                         echo "<th>Description</th>";
                                         echo "<th>Price</th>";
                                         echo "<th>Status</th>";
-                                        echo "<th>Category ID</th>";
-                                        echo "<th>Img</th>";
+                                        echo "<th>Category Img</th>";
+                                        echo "<th>Action</th>";
 
                                         
                                     echo "</tr>";

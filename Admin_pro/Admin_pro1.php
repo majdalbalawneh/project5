@@ -40,6 +40,8 @@
                     include_once '../Configration/connection.php';
                   
                     // Attempt select query execution
+                    
+                    // SELECT * FROM products ORDER BY product_id DESC;///////
                     $sql = "SELECT * FROM products;";
                     if($result = mysqli_query($conn, $sql)){
                         if(mysqli_num_rows($result) > 0){
@@ -51,8 +53,8 @@
                                         echo "<th>Description</th>";
                                         echo "<th>Price</th>";
                                         echo "<th>Status</th>";
-                                        echo "<th>Category ID</th>";
-                                        echo "<th>Img</th>";
+                                        echo "<th>Category img</th>";
+                                        echo "<th>Action</th>";
 
                                         
                                     echo "</tr>";

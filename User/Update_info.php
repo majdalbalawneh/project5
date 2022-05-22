@@ -163,7 +163,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_close($conn);
         }  else{
             // URL doesn't contain id parameter. Redirect to error page
-            header("location: error.php");
+            // header("location: error.php");
+          
             exit();
         }
     }

@@ -37,9 +37,9 @@
  <li><a href="../product/product.php">Products</a></li>
  <li><a href="../Welcome/ContactUs.html">Contact Us</a></li>
  <li><a href="../Welcome/AboutUs.html">About US</a></li>
- 
+<!--  
  <li><a href="../Login/Login.php">Login</a></li>
- <li><a href="../Regestration/Signup.php">Sign Up</a></li>
+ <li><a href="../Regestration/Signup.php">Sign Up</a></li> -->
  <li><a href="../User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
  <li><a href=""><img style="position:absolute; margin-top:-2.5%; width:4%" src="../img/cart2.png" ></a></li>
 
@@ -57,6 +57,7 @@
                     // Include config file
                     include_once '../Configration/connection.php';
                     $email= $_SESSION['email'];
+                    
                     // Attempt select query execution
                     $sql ="SELECT * FROM register WHERE  Email='$email'; ";
                     if($result = mysqli_query($conn, $sql)){
@@ -80,7 +81,7 @@
                                 echo "</thead>";
                                 echo "<tbody>";
                                 while($row = mysqli_fetch_array($result)){
-
+                                 
                                     echo "<tr>";
                                         echo "<td>" . $row['id'] . "</td>";
                                         echo "<td>" . $row['First_Name'] . "</td>";

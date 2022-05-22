@@ -66,8 +66,9 @@ date_default_timezone_set("Asia/Amman");
                 } 
                 ?>
              </main>
-            </form>   
-<div class="container" style="margin-top:-7% ; margin-left:50%; ">
+            </form> 
+            <br>   <br>   <br>     
+<div class="container" style="margin-top:8% ; margin-left:50%; ">
 <?php
 
     echo "<form  method='POST' action='".setComments($conn)."'>
