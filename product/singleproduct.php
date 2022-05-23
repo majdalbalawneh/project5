@@ -7,6 +7,7 @@ date_default_timezone_set("Asia/Amman");
 if(isset($_GET['add'])){
     $quantity=$_GET['quantity'];
       $add_id = $_GET['add'];
+$id=$_GET['id_prod'];
       $adding="INSERT INTO `cart`( `quantity`) VALUES ('$quantity');";
       mysqli_query($conn,$adding);
   
@@ -25,29 +26,29 @@ if(isset($_GET['add'])){
      <link rel="stylesheet" href="./product.css">
      <title>Details</title>
 </head>
-<header style="font-family: 'Nunito', sans-serif;
+<body>
+   <header style="font-family: 'Nunito', sans-serif;
 font-family: 'Patrick Hand', cursive;">
 <div class="l-header">
     <div class="land-container">
         
-        <div class="navbar">
+   
+<div class="navbar">
        <div class="logo"><img src="../img/logo_kids.gif"width="100px"> </div>
-      
        <nav >
 <ul style="margin-right: 5%; font-family: 'Nunito', sans-serif;
 font-family: 'Patrick Hand', cursive; color:black;">
- <li><a style="color:black;" href="./index.html">Home</a></li>
- <li><a style="color:black;" href="./product/product.php">Products</a></li>
- <li><a style="color:black;" href="./Welcome/ContactUs.html">Contact Us</a></li>
- <li><a style="color:black;" href="./Welcome/AboutUs.html">About US</a></li>
- 
- <li><a style="color:black;" href="./Login/Login.php">Login</a></li>
- <li><a style="color:black;" href="./Regestration/Signup.php">Sign Up</a></li>
- <li><a style="color:black;" href="./User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
- <li><a style="color:black;" href="./Cart/cart.php"><i class="fas fa-shopping-cart"></i ></i></a></li>
+ <li><a style="color:black;" href="../index.php">Home</a></li>
+ <li><a style="color:black;" href="../product/product.php">Products</a></li>
+ <li><a style="color:black;" href="../Welcome/ContactUs.html">Contact Us</a></li>
+ <li><a style="color:black;" href="../Welcome/AboutUs.html">About US</a></li>
+  <li><a style="color:black;" href="../User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+ <li><a style="color:black;" href="../Cart/cart.php"><i class="fas fa-shopping-cart"></i ></i></a></li>
 
 </ul> <hr style="width:70%; margin-left: 31%;">
        </nav>
+
+    </div>
       
 </header>
   
@@ -79,9 +80,9 @@ font-family: 'Patrick Hand', cursive;">
   
 
  </header> -->
- <body>
+
  <br>
- <section class="section-content padding-y bg">
+ <section class="section-content padding-y ">
     
     <div class="container">
 
