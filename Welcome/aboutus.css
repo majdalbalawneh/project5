@@ -1,0 +1,219 @@
+.about {
+    padding: 79px 0;
+}
+
+.about .heading h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 3%;
+
+}
+
+.about .heading h2 span {
+    color: hwb(352 26% 5%);
+}
+
+.about .heading p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #999999;
+    margin: 20px 0 60px;
+    padding: 0;
+}
+
+.about h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.about p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #999999;
+    margin: 20px 0 15px;
+    padding: 0;
+}
+
+.about h4 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 8px 0;
+}
+
+.about h4 i {
+    color: hwb(352 26% 5%);
+    margin-right: 10px;
+}
+#about-us-section{
+    color: hwb(352 26% 5%);
+}
+
+
+.news{
+    padding: 4.8px 0 9.6px 0;
+  text-align: center;
+  }
+  .news-heading{
+    font-size: 20px;
+    line-height: 1.4;
+    
+    color: #333;
+  }
+  .news p{
+    font-size: 18px;
+    margin-bottom: 16px;
+    margin-top: 12px;
+    line-height: 1.8;
+    
+  }
+  
+  input[type="email"]{
+    display: inline-block;
+    width: 60%;
+    padding: 18px 36px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    height: 70px;
+    margin-top: 18px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.06); 
+  
+  }
+  input,
+  input::-webkit-input-placeholder {
+      font-size: 16px;
+      line-height: 3;
+  }
+  
+  .bt {
+    margin-left: -160px;
+      font-size: 16px;
+      display: inline-block;
+      font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 20px;
+  
+    /* Only necessary for .btn */
+    border: none;
+    cursor: pointer;
+    background-color:#dc3545;
+    color: #fff;
+  }
+  .news-letter{
+      margin-top: 4%;
+  }
+
+
+  /**************************************************/
+  
+#Aabout {
+    display: flex;
+  }
+  
+  .Aabout {
+    display: flex;
+    width: 20%;
+    height: 10%;
+    flex-direction: column;
+    margin: 1rem;
+    margin-left: 3rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: grey;
+  }
+  
+  #Aaboutus {
+    font-family: "Baloo Bhai 2", cursive;
+    font-family: "Saira Stencil One", cursive;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .abouth2 {
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif
+  }
+  
+
+  
+  .aboutimg {
+    width: 100%;
+    border-radius: 0.8rem;
+  }
+  
+  .mm {
+    background-color: #fedd1f38;
+  }
+
+  .ss {
+    background-color: #fe1f1f38;
+  }
+
+  .tt {
+    background-color: #61ca6b38;
+  }
+
+  .tttt {
+    background-color: #82859138;
+  }
+  
+  
+  .abouth1 {
+    font-size: 4rem;
+  }
+  
+  .aboutus {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  .heading {
+    font-family: "Baloo Bhai 2", cursive;
+    margin: 0.5rem;
+    font-size: 2rem;
+    display: flex;
+    width: 100%;
+  }
+  
+  .aboutp {
+    margin: 0.5rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: justify;
+  }
+  
+  #card {
+    display: flex;
+  }
+  
+  @media screen and (max-width: 700px) {
+    #about {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .about {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      border-top: 1px solid grey;
+      padding-top: 2rem;
+    }
+  
+    .aboutp {
+      border: none;
+    }
+  }
+  
