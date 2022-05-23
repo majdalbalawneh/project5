@@ -22,7 +22,7 @@
 </head>
 <body>
 <div class="navbar">
-       <div class="logo"><img src="img/logo_kids.gif"width="100px"> </div>
+       <div class="logo"><img src="img/logo_kids.gif"width="90px"> </div>
        <nav>
 <ul style="margin-right: 5%; font-family: 'Nunito', sans-serif;
 font-family: 'Patrick Hand', cursive; ">
@@ -30,10 +30,11 @@ font-family: 'Patrick Hand', cursive; ">
  <li><a href="./product/product.php">Products</a></li>
  <li><a href="./Welcome/ContactUs.html">Contact Us</a></li>
  <li><a href="./Welcome/AboutUs.html">About US</a></li>
+ <li><a href="./index.html">Logout</a></li>
 </ul> <hr style="width:70%; margin-left: 31%;">
        </nav><nav style="text-align:center;margin-left: 30%; margin-top: -2%; width:50%">
   <h2>Admin Dashboard</h2>
-  <a href="index.html"><button class="btn btn-outline-primary" type="button">Logout</button></a>
+  <!-- <a href="index.html"><button class="btn btn-outline-primary" type="button">Logout</button></a> -->
 </nav>
 </div>
 <hr><br><br>

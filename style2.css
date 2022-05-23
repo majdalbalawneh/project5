@@ -355,6 +355,56 @@
      transform: translate3d(0, 0, 0) rotateY(-45deg) !important;
    }
  
+
+   /* /////////////////////////////////////////////////flip card */
+     /* ------------------------------flip card --------------------------------- */
+   /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180 deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* ************************************************************* */
  
  /* ////////////////////////////////////////////////////////////////////////////////////////////////////// */
  /* .land-container{
@@ -3029,19 +3079,21 @@
    
    .btn-success {
      color: #fff;
-     background-color: #28a745;
-     border-color: #28a745;
+     background-color: #e55951;
+     border-color: #e55951;
+    font-size: larger;
    }
    
    .btn-success:hover {
      color: #fff;
-     background-color: #218838;
-     border-color: #1e7e34;
+     background-color: #e0251b;
+     border-color:#e1453d;
+   
    }
    
    .btn-success:focus, .btn-success.focus {
      color: #fff;
-     background-color: #218838;
+     background-color: #e55951;
      border-color: #1e7e34;
      box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
    }
@@ -3055,13 +3107,13 @@
    .btn-success:not(:disabled):not(.disabled):active, .btn-success:not(:disabled):not(.disabled).active,
    .show > .btn-success.dropdown-toggle {
      color: #fff;
-     background-color: #1e7e34;
-     border-color: #1c7430;
+     background-color: #e55951;
+     border-color: #e55951;
    }
    
    .btn-success:not(:disabled):not(.disabled):active:focus, .btn-success:not(:disabled):not(.disabled).active:focus,
    .show > .btn-success.dropdown-toggle:focus {
-     box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+     box-shadow: 0 0 0 0.2rem rgba(205, 232, 48, 0.5);
    }
    
    .btn-info {
@@ -10619,3 +10671,7 @@
      }
    }
    /*# sourceMappingURL=bootstrap.css.map */
+
+
+
+ 

@@ -1,5 +1,15 @@
 <?php
 
+// if( $e == $value['email'] && $p == $value['password']){
+//    $_SESSION['firstname']= $value['firstname'];
+//    $_SESSION['secondname']= $value['secondname'];
+//    $_SESSION['thirdname']= $value['thirdname'];
+//    $_SESSION['lastname']= $value['lastname'];
+//    $_SESSION['birthdate']= $value['birthdate'];
+//    $_SESSION['email']= $value['email'];
+//    $_SESSION['phone']= $value['phone'];
+//    $_SESSION['password']= $value['password'];}
+
 include_once '../Configration/connection.php';
 
 if(isset($_POST['order_btn'])){
@@ -31,8 +41,8 @@ if(isset($_POST['order_btn'])){
       <div class='message-container'>
          <h3>thank you for shopping!</h3>
          <div class='order-detail'>
-            <span>".$total_product."</span>
-            <span > total : $".$price_total." </span>
+         <span>".$total_product."</span>
+         <span > total : $".$price_total." </span>
          </div>
          <div class='customer-details'>
             <p> your name : <span>".$name."</span> </p>

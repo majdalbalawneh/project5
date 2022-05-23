@@ -151,11 +151,14 @@ font-family: 'Patrick Hand', cursive;">
       
   
    
-    <img src="https://images.squarespace-cdn.com/content/v1/5733027f2fe131d8f5609c06/1588349735296-3LAESYK90RU2VTVLKQQR/girl_on_swing_somebodyelsa.gif" alt="" class="anima bb" style="width:360px; height: 650px; margin-top: 44%;
-    margin-left:70%;">
-<img src="https://3u26hb1g25wn1xwo8g186fnd-wpengine.netdna-ssl.com/files/2019/06/noodles-1.gif" alt="" class="anima tt">
-    <form  method="post" class="reg-form">
-    <fieldset>
+    <!-- <img src="https://images.squarespace-cdn.com/content/v1/5733027f2fe131d8f5609c06/1588349735296-3LAESYK90RU2VTVLKQQR/girl_on_swing_somebodyelsa.gif" alt="" class="anima bb" style="width:360px; height: 650px; margin-top: 44%;
+    margin-left:70%;"> -->
+<!-- <img src="https://3u26hb1g25wn1xwo8g186fnd-wpengine.netdna-ssl.com/files/2019/06/noodles-1.gif" alt="" class="anima tt"> -->
+    <form style="display:flex;flex-wrap:wrap;gap:1.5rem ;align-items: center;padding: 1.5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+;" method="post" class="reg-form">
+    <!-- <fieldset> -->
     <h1 class="legend"><strong>S</strong>IGNUP</h1><hr>
     <div class="txt">
     <label class="reg-lbl" style="font-size:20px;font-weight: bold;color: green;">First Name</label><br>
