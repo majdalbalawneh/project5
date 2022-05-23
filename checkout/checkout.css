@@ -77,10 +77,11 @@ section{
    text-align: center;
    font-size: 3.5rem;
    text-transform: uppercase;
-   color:#8E3200;
    margin-bottom: 2rem;
 }
-
+.btn{
+   background-color: #e46a64e6 !important;
+}
 .btn,
 .option-btn,
 .delete-btn{
@@ -99,7 +100,7 @@ section{
 .btn:hover,
 .option-btn:hover,
 .delete-btn:hover{
-   background-color:#A2416B;
+   background-color:#a2416bad;
 }
 
 .option-btn i,
@@ -116,43 +117,7 @@ section{
    background-color: var(--red);
 }
 
-/* .message{
-   background-color: var(--blue);
-   position: sticky;
-   top:0; left:0;
-   z-index: 10000;
-   border-radius: .5rem;
-   background-color: var(--white);
-   padding:1.5rem 2rem;
-   margin:0 auto;
-   max-width: 1200px;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   gap:1.5rem;
-} */
 
-/* .message span{
-   font-size: 2rem;
-   color:var(--black);
-}
-
-.message i{
-   font-size: 2.5rem;
-   color:var(--black);
-   cursor: pointer;
-}
-
-.message i:hover{
-   color:var(--red);
-} */
-
-/* .header{
-   background-color: var(--blue);
-   position: sticky;
-   top:0; left:0;
-   z-index: 1000;
-} */
 
 .flex{
    display: flex;
@@ -196,97 +161,6 @@ section{
    font-size: 2rem;
 }
 
-/* #menu-btn{
-   margin-left: 2rem;
-   font-size: 3rem;
-   cursor: pointer;
-   color:var(--white);
-   display: none;
-}
-
-.add-product-form{
-   max-width: 50rem;
-   background-color: var(--bg-color);
-   border-radius: .5rem;
-   padding:2rem;
-   margin:0 auto;
-   margin-top: 2rem;
-}
-
-.add-product-form h3{
-   font-size: 2.5rem;
-   margin-bottom: 1rem;
-   color:var(--black);
-   text-transform: uppercase;
-   text-align: center;
-}
-
-.add-product-form .box{
-   text-transform: none;
-   padding:1.2rem 1.4rem;
-   font-size: 1.7rem;
-   color:var(--black);
-   border-radius: .5rem;
-   background-color: var(--white);
-   margin:1rem 0;
-   width: 100%;
-}
-
-.display-product-table table{
-   width: 100%;
-   text-align: center;
-}
-
-.display-product-table table thead th{
-   padding:1.5rem;
-   font-size: 2rem;
-   background-color: var(--black);
-   color:var(--white);
-}
-
-.display-product-table table td{
-   padding:1.5rem;
-   font-size: 2rem;
-   color:var(--black);
-}
-
-.display-product-table table td:first-child{
-   padding:0;
-}
-
-.display-product-table table tr:nth-child(even){
-   background-color: var(--bg-color);
-}
-
-.display-product-table .empty{
-   margin-bottom: 2rem;
-   text-align: center;
-   background-color: var(--bg-color);
-   color:var(--black);
-   font-size: 2rem;
-   padding:1.5rem;
-}
-
-.edit-form-container{
-   position: fixed;
-   top:0; left:0;
-   z-index: 1100;
-   background-color: var(--dark-bg);
-   padding:2rem;
-   display: none; */
-   /* align-items: center;
-   justify-content: center;
-   min-height: 100vh;
-   width: 100%;
-}
-
-.edit-form-container form{
-   width: 50rem;
-   border-radius: .5rem;
-   background-color: var(--white);
-   text-align: center;
-   padding:2rem;
-} */
 
 .box{
    width: 100%;
@@ -351,7 +225,7 @@ section{
 .checkout-form form{
    padding:2rem;
    border-radius: .5rem;
-   background-color: #FEFBF3; 
+   background-color: #f8f9fa; 
 }
 
 .checkout-form form .flex{
@@ -406,11 +280,12 @@ section{
 /* /////////////////////////////////////////////////////////////// */
 .display-order span.grand-total{
    width: 100%;
-   background-color: #DEA057;
+   background-color: #e46a64e6;
    color:var(--white);
    padding:1rem;
    margin-top: 1rem;
 }
+
 
 .order-message-container{
    position: fixed;

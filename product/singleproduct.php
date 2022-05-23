@@ -12,34 +12,30 @@ date_default_timezone_set("Asia/Amman");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
-    <!-- <link rel="stylesheet" href="./product.css"> -->
-    <!-- <link rel="stylesheet" href="../style2.css"> -->
-       <link rel="stylesheet" href="./navbar.css"> 
+    
+     <link rel="stylesheet" href="./product.css">
      <title>Details</title>
 </head>
-
-
-
 <header style="font-family: 'Nunito', sans-serif;
 font-family: 'Patrick Hand', cursive;">
 <div class="l-header">
     <div class="land-container">
         
         <div class="navbar">
-       <div class="logo"><img src="./img/logo_kids.gif"width="100px"> </div>
+       <div class="logo"><img src="../img/logo_kids.gif"width="100px"> </div>
       
-       <nav>
+       <nav >
 <ul style="margin-right: 5%; font-family: 'Nunito', sans-serif;
-font-family: 'Patrick Hand', cursive; ">
- <li><a href="./index.html">Home</a></li>
- <li><a href="./product/product.php">Products</a></li>
- <li><a href="./Welcome/ContactUs.html">Contact Us</a></li>
- <li><a href="./Welcome/AboutUs.html">About US</a></li>
+font-family: 'Patrick Hand', cursive; color:black;">
+ <li><a style="color:black;" href="./index.html">Home</a></li>
+ <li><a style="color:black;" href="./product/product.php">Products</a></li>
+ <li><a style="color:black;" href="./Welcome/ContactUs.html">Contact Us</a></li>
+ <li><a style="color:black;" href="./Welcome/AboutUs.html">About US</a></li>
  
- <li><a href="./Login/Login.php">Login</a></li>
- <li><a href="./Regestration/Signup.php">Sign Up</a></li>
- <li><a href="./User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
- <li><a href="./Cart/cart.php"><i class="fas fa-shopping-cart"></i ></i></a></li>
+ <li><a style="color:black;" href="./Login/Login.php">Login</a></li>
+ <li><a style="color:black;" href="./Regestration/Signup.php">Sign Up</a></li>
+ <li><a style="color:black;" href="./User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+ <li><a style="color:black;" href="./Cart/cart.php"><i class="fas fa-shopping-cart"></i ></i></a></li>
 
 </ul> <hr style="width:70%; margin-left: 31%;">
        </nav>
@@ -117,7 +113,7 @@ font-family: 'Patrick Hand', cursive;">
                                 <input type="hidden" name="hidden_product_name" value="<?php echo $row["product_name"]; ?>">
                                 <input type="hidden" name="hidden_img" value="<?php echo $row["img"]; ?>">
                                 <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
-                                <input style="background-color:#e55951 ; height:3rem; font-size:larger;color:white;" type="submit" name="add" class="btn btn-block" value="Added to cart">
+                                <input style="background-color:#e55951 ; height:3rem; font-size:larger;color:white; margin-left:5%;" type="submit" name="add" class="btn btn-block" value="Added to cart">
                             </article> <!-- product-info-aside .// -->
                            
                         <!-- col.// -->
