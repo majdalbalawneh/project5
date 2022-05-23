@@ -21,11 +21,11 @@ if (isset($_GET['submit'])){
             print_r($row['Password']);
 
                 if(($loginPassword==$row['Password'])){
-                    $loginPassword_result="<span style=' color:green'>✅ Correct Password</span><br>";
+                    $loginPassword_result="<br><small style='color:white'>✅ Correct Password</small><br>";
                     $loginPassword_correct=true;
                    
                 }else{
-                    $loginPassword_result="<span style=' color:red'>❌Incorrect Password</span><br>";
+                    $loginPassword_result="<br><small style='color:white'>❌Incorrect Password</small><br>";
                     $loginPassword_correct=false;
             }
         }
@@ -33,7 +33,7 @@ if (isset($_GET['submit'])){
     }   
     
     if($loginEmail_correct && $loginPassword_correct){
-        header('location:../index.html');
+        header('location:../product/product.php');
       
         $row['last-login']= date("d-m-Y - h:i:sa");
         
@@ -45,16 +45,16 @@ if (isset($_GET['submit'])){
     
     if($loginEmail=="admin@gmail.com"){
 		if($loginPassword== "AdminAdmin1"){
-            $loginEmail_result="<span style=' color:green'>✅ Correct Email</span><br>";
+            $loginEmail_result="<br><small style='color:white'>✅ Correct Email</small><br>";
 			$adminEmail_correct=true;
 			$adminPass_correct=true;
 	
 		}else{
-			$loginPassword_result="<span style=' color:red'>❌Incorrect Password</span><br>";
+			$loginPassword_result="<br><small style='color:white'>❌Incorrect Password</small><br>";
 	    	$adminPass_correct=false;
 		}
 	}else{
-		$loginEmail_result="<span style=' color:red'>❌Incorrect Email or Password</span><br>";
+		$loginEmail_result="<br><small style='color:white'>❌Incorrect Password or Email</small><br>";
 		$adminEmail_correct=false;
 	}
 	if ($adminEmail_correct && $adminPass_correct ){
@@ -70,184 +70,44 @@ if (isset($_GET['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="login.css">
     <title>Login</title>
+    <style>
+      body{
+        background-color:white;
+      }
+    </style>
 </head>
 <body>
-
-<div class="navbar">
-       <div class="logo"><img src="../img/logo_kids.gif"width="100px"> </div>
-      
-       <nav style="font-family: 'Nunito', sans-serif;
-font-family: 'Patrick Hand', cursive;">
-<ul style="margin-right: 5%; font-family: 'Nunito', sans-serif;
-font-family: 'Patrick Hand', cursive;">
-<li><a href="../index.html">Home</a></li>
-<li><a href="../product/product.php">Products</a></li>
-<li><a href="../Welcome/ContactUs.html">Contact Us</a></li>
-<li><a href="../Welcome/AboutUs.html">About US</a></li>
-
-<li><a href="../Login/Login.php">Login</a></li>
-<li><a href="../Regestration/Signup.php">Sign Up</a></li>
-<li><a href=""><img style="position:absolute; margin-top:-2.5%; width:4%" src="../img/cart2.png" ></a></li>
-
-</ul> <hr style="width:70%; margin-left: 31%;">
-</nav>
-      
+<div id="wrap">
+<form method="GET">
+  <div class="form">
+    <h1 class="form-header">LOGIN</h1>
+    <div class="form-content">
+      <div class="form-container">
+        <div class="case">
+          <input type="email" name="loginEmail" id="loginEmail"   placeholder="Email" class="form-input">
+          <?php if(isset($loginEmail_result)){echo $loginEmail_result;}?>
+        </div>
+      </div>
+      <div class="form-container">
+        <div class="case">
+          <input type="password" name="loginPassword" id="loginPassword"  placeholder="Password" class="form-input">
+          <?php if(isset($loginPassword_result)){echo $loginPassword_result;}?>
+        </div>
+      </div>
+      <div class="form-add-text">
+      <span class="btn-text">Don't have an account <a style="text-decoration:none ; color:#e55951" href="../Regestration/Signup.php" >Sign Up!</span>
+      </div>
+      <div class="form-button">
+        <button type="submit" name="submit" class="btn-login">
+          <span class="btn-text" >Log in</span>
+        </button>
+      </div>
     </div>
-    
-        <form method="GET" class="reg-form">
-        <fieldset>
-        <h1 class="legend"><strong>L</strong>OGIN</h1><hr>
-                <p class="welc">Welcome back! Login with your credentials</p>
-                <div class="txt">
-                <label class="reg-lbl" style="font-size:20px;font-weight: bold;color: green;">Email</label>
-                <br>
-                <!--Email-->
-                <input type="email" name="loginEmail" id="loginEmail"   placeholder="Your Email" required ><br>
-                <?php if(isset($loginEmail_result)){echo $loginEmail_result;}?>
-                <br>
-                <!--Password-->
-                <label class="reg-lbl" style="font-size:20px;font-weight: bold;color: green;">Password</label>
-                <br>
-                <input type="password" name="loginPassword" id="loginPassword"   placeholder="Password" required><br>
-                <?php if(isset($loginPassword_result)){echo $loginPassword_result;}?>
-                <br>
-                <input class="btn btn-warning"type="submit" value="Submit" name="submit">
-<br><br>
-                <span> <label class="link"> Don`t have an account !!<a href='../Regestration/Signup.php'>Sign Up</a></label></span><br>
-                </div>
-                <!-- Regestration/Signup.php -->
-</fieldset>
-        </form>
-
-
-        <marquee behavior="alternate">
-    <img src="https://img.freepik.com/free-vector/kids-train-toy-cartoon-style-vector-illustration-isolated-white-background_356415-1272.jpg?size=626&ext=jpg" alt="">
-  </marquee>
-
-
-<!-- //////////////////footer -->
-<div class="container-fluied">
-    <!-- Footer -->
-    <footer
-            class="text-center text-lg-start text-primary"
-            style="background: linear-gradient(to right, rgba(216, 112, 147, 0.377),rgba(216, 112, 147, 0.235), rgba(216, 112, 147, 0.087));"           
-            >
-      <!-- Grid container -->
-      <div class="container p-4 pb-0">
-        <!-- Section: Links -->
-        <section class="">
-          <!--Grid row-->
-          <div class="row">
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">
-                Toys Shop
-              </h6>
-              <p>
-                Toys shop has announced that Toys store is opening , its separate platform that provides The most distinctive games that the child spends his time enjoying and learning, has amassed more than 35 million customers.
-              </p>
-            </div>
-            <!-- Grid column -->
-  
-            <hr class="w-100 clearfix d-md-none" />
-  
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Categores</h6>
-              <p >
-                <a class="text-primary">Electronic Toys</a>
-              </p>
-              <p>
-                <a class="text-primary">Crative Toys</a>
-              </p>
-              <p>
-                <a class="text-primary">Educational Toys</a>
-              </p>
-              <p>
-                <a class="text-primary" >Dolls Toys</a>
-              </p>
-            </div>
-            <!-- Grid column -->
-  
-            <hr class="w-100 clearfix d-md-none" />
-  
-            <!-- Grid column -->
-            <hr class="w-100 clearfix d-md-none" />
-  
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Contact Us</h6>
-              <p><i class="fas fa-home mr-3"></i> Aqaba , Jordan</p>
-              <p><i class="fas fa-envelope mr-3"></i> info@mail.com</p>
-              <p><i class="fas fa-phone mr-3"></i> +960 7710101010</p>
-            </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
-  
-              <!-- linkedin majd -->
-              <a
-                 class="btn btn-primary btn-floating m-1"
-                 style="background-color: #3b5998"
-                 href="#!"
-                 role="button"
-                 ><i class="fab fa-facebook-f"></i
-                ></a>
-  
-              
-  
-              <!-- github samer -->
-              <a
-                 class="btn btn-primary btn-floating m-1"
-                 style="background-color: #dd4b39"
-                 href="#!"
-                 role="button"
-                 ><i class="fab fa-google"></i
-                ></a>
-  
-              
-                    <br>
-              <!-- Linkedin -->
-              <a
-                 class="btn btn-primary btn-floating m-1"
-                 style="background-color: #0082ca"
-                 href="https://www.linkedin.com/in/tamara-al-shabatat-060452123/?challengeId=AQFBHTafIZQKgAAAAYAhs1i-oKYMHGzoCp7CFeBZxbEnPZafk74JDnX6xmEwh0tDvN3Eq6-LHqiH4WRl2oxvFyTOX64Dyzv3lQ&submissionId=3ffc26ce-3a62-e516-90b4-716d0cbeeb40"
-                 role="button" target="_blank"
-                 ><i class="fab fa-linkedin-in"></i
-                ></a>
-              <!-- Github -->
-              <a
-                 class="btn btn-primary btn-floating m-1"
-                 style="background-color: #333333"
-                 href="https://github.com/majdalbalawneh"
-                 role="button" target="_blank"
-                 ><i class="fab fa-github"></i
-                ></a>
-            </div>
-          </div>
-          <!--Grid row-->
-        </section>
-        <!-- Section: Links -->
-      </div>
-      <!-- Grid container -->
-  
-      <!-- Copyright -->
-      <div
-           class="text-center p-3"
-           style="background-color: rgba(0, 0, 0, 0.2)"
-           >
-        MST<sup>2</sup>&nbsp; © 2022 Copyright:
-        <a  href="https://www.orange.jo/ar/pages/default.aspx" target="_blank">Orange.jo</a> 
-          
-      </div>
-      <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
-
-
+  </div>
+     
+</div>
+</form>
 </body>
 </html>

@@ -43,25 +43,16 @@ if(isset($_GET['add'])){
  font-family: 'Patrick Hand', cursive;">
  <ul style="margin-right: 5%; font-family: 'Nunito', sans-serif;
  font-family: 'Patrick Hand', cursive;">
- <li><a href="../index.html">Home</a></li>
- <li><a href="../product/product.php">Products</a></li>
- <li><a href="../Welcome/ContactUs.html">Contact Us</a></li>
- <li><a href="../Welcome/AboutUs.html">About US</a></li>
+ <li><a style="color:black" href="../index.html">Home</a></li>
+ <li><a style="color:black" href="../product/product.php">Products</a></li>
+ <li><a style="color:black" href="../Welcome/ContactUs.html">Contact Us</a></li>
+ <li><a style="color:black" href="../Welcome/AboutUs.html">About US</a></li>
  
- <li><a href="../Login/Login.php">Login</a></li>
- <li><a href="../Regestration/Signup.php">Sign Up</a></li>
- <li><a href="../User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
- <li><a href="../Cart/cart.php"><img style="position:absolute; margin-top:-2.5%; width:4%" src="../img/cart2.png" ></a></li><br><br>
-<li><select class="custom-select custom-select-sm mb-3">
-     <option selected disabled> Change Category </option>
-        <?php	$r ="SELECT * FROM categories";
-         $res_category=mysqli_query($conn, $r);
-		while ($row = mysqli_fetch_array($res_category)) { ?>
-          <option><a href="category.php?category=<?php echo $row['category_id']; ?>"><?php echo $row['category_name'];?>
-             </a></option>
-         <?php
-		}
-          ?>
+ <li><a style="color:black" href="../Login/Login.php">Login</a></li>
+ <li><a style="color:black" href="../Regestration/Signup.php">Sign Up</a></li>
+ <li><a style="color:black" href="../User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+
+<li><a style="color:black" href="./Cart/cart.php"><i class="fas fa-shopping-cart"></i ></i></a></li>
  </select></li>
  </ul> <hr style="width:70%; margin-left: 31%;">
         </nav>
@@ -135,7 +126,7 @@ if(isset($_GET['add'])){
                                             <!-- <input type="hidden" name="id_user"> -->
                                     <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
                                     <!----------------------------- change the color of the buttons 21-5-2022 at 6:22pm ------------------------>
-                                    <input type="submit" name="add" class="btn-warning btn-block btn-info" value="Add to cart">
+                                    <input style="background-color: #e55951;" type="submit" name="add" class="btn-warning btn-block btn-info" value="Add to cart">
                                 </figcaption>
                             </figure>
                         </form>
@@ -194,12 +185,13 @@ if(isset($_GET['add'])){
 <!-- ========================= SECTION CONTENT END// ========================= -->
 
 <!-- ========================= FOOTER ========================= -->
-    <!-- //////////////////footer -->
-    <div class="container-fluied">
+
+<div class="container-fluied">
     <!-- Footer -->
     <footer
-            class="text-center text-lg-start text-primary"
-            style="background: linear-gradient(to right, rgba(216, 112, 147, 0.377),rgba(216, 112, 147, 0.235), rgba(216, 112, 147, 0.087));"           
+            class="text-center text-lg-start "
+            style="background: linear-gradient(to right,  #e558519a,#e46a6493, rgba(216, 112, 147, 0.215));"
+    
             >
       <!-- Grid container -->
       <div class="container p-4 pb-0">
@@ -212,7 +204,7 @@ if(isset($_GET['add'])){
               <h6 class="text-uppercase mb-4 font-weight-bold">
                 Toys Shop
               </h6>
-              <p>
+              <p style= "text-align: justify; ">
                 Toys shop has announced that Toys store is opening , its separate platform that provides The most distinctive games that the child spends his time enjoying and learning, has amassed more than 35 million customers.
               </p>
             </div>
@@ -221,21 +213,21 @@ if(isset($_GET['add'])){
             <hr class="w-100 clearfix d-md-none" />
   
             <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <!-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">Categores</h6>
               <p >
-                <a class="text-primary">Electronic Toys</a>
+                <a class="text">Electronic Toys</a>
               </p>
               <p>
-                <a class="text-primary">Crative Toys</a>
+                <a class="text-">Crative Toys</a>
               </p>
               <p>
-                <a class="text-primary">Educational Toys</a>
+                <a class="text">Educational Toys</a>
               </p>
               <p>
-                <a class="text-primary" >Dolls Toys</a>
+                <a class="text" >Dolls Toys</a>
               </p>
-            </div>
+            </div> -->
             <!-- Grid column -->
   
             <hr class="w-100 clearfix d-md-none" />
@@ -315,12 +307,7 @@ if(isset($_GET['add'])){
     </footer>
     <!-- Footer -->
 
-<!-- ========================= FOOTER END // ========================= -->
 
-
-<script>
-$("input[type='number']").inputSpinner()
-</script>
     
 </body>
 </html>
