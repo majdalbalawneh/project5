@@ -44,12 +44,8 @@ font-family: 'Patrick Hand', cursive; ">
             <li><a href="./product/product.php">Products</a></li>
             <li><a href="./Welcome/ContactUs.html">Contact Us</a></li>
             <li><a href="./Welcome/AboutUs.html">About US</a></li>
-
             <li><a href="./Login/Login.php">Login</a></li>
             <li><a href="./Regestration/Signup.php">Sign Up</a></li>
-            <li><a href="./User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-            <li><a href="./Cart/cart.php"><i class="fas fa-shopping-cart"></i></i></a></li>
-
           </ul>
           <hr style="width:70%; margin-left: 31%;">
         </nav>

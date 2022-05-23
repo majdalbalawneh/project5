@@ -28,7 +28,6 @@ if(isset($_GET['add'])){
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <link rel="stylesheet" href="product.css">
     <link rel="stylesheet" href="../style2.css">
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Store</title>
     <style>
@@ -37,29 +36,20 @@ if(isset($_GET['add'])){
 </head>
 <body>
 <div class="navbar">
-        <div class="logo"><img src="../img/logo_kids.gif"width="100px"> </div>
-       
-        <nav style="font-family: 'Nunito', sans-serif;
- font-family: 'Patrick Hand', cursive;">
- <ul style="margin-right: 5%; font-family: 'Nunito', sans-serif;
- font-family: 'Patrick Hand', cursive;">
- <li><a style="color:black" href="../index.html">Home</a></li>
- <li><a style="color:black" href="../product/product.php">Products</a></li>
- <li><a style="color:black" href="../Welcome/ContactUs.html">Contact Us</a></li>
- <li><a style="color:black" href="../Welcome/AboutUs.html">About US</a></li>
- 
- <li><a style="color:black" href="../Login/Login.php">Login</a></li>
- <li><a style="color:black" href="../Regestration/Signup.php">Sign Up</a></li>
- <li><a style="color:black" href="../User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+       <div class="logo"><img src="../img/logo_kids.gif"width="100px"> </div>
+       <nav >
+<ul style="margin-right: 5%; font-family: 'Nunito', sans-serif;
+font-family: 'Patrick Hand', cursive; color:black;">
+ <li><a style="color:black;" href="../index.php">Home</a></li>
+ <li><a style="color:black;" href="../product/product.php">Products</a></li>
+ <li><a style="color:black;" href="../Welcome/ContactUs.html">Contact Us</a></li>
+ <li><a style="color:black;" href="../Welcome/AboutUs.html">About US</a></li>
+  <li><a style="color:black;" href="../User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+ <li><a style="color:black;" href="../Cart/cart.php"><i class="fas fa-shopping-cart"></i ></i></a></li>
 
-<li><a style="color:black" href="./Cart/cart.php"><i class="fas fa-shopping-cart"></i ></i></a></li>
- </select></li>
- </ul> <hr style="width:70%; margin-left: 31%;">
-        </nav>
-     </div>
-
-</ul>
+</ul> <hr style="width:70%; margin-left: 31%;">
        </nav>
+
     </div>
     <br><br><br>
 <section class="section-content ml">
@@ -126,7 +116,7 @@ if(isset($_GET['add'])){
                                             <!-- <input type="hidden" name="id_user"> -->
                                     <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
                                     <!----------------------------- change the color of the buttons 21-5-2022 at 6:22pm ------------------------>
-                                    <input style="background-color: #e55951;" type="submit" name="add" class="btn-warning btn-block btn-info" value="Add to cart">
+                                    <input type="submit" name="add" class="btn-warning  btn-info" value="Add to cart">
                                 </figcaption>
                             </figure>
                         </form>
@@ -153,7 +143,7 @@ if(isset($_GET['add'])){
                         // changing the position of the section product
 						echo '  <ul class="pagination" style="justify-content: center!important;">';
 						if ($page > 1) {
-							echo '<li  class="paginate_button page-item previous" id="zero_config_previous"><a href="store.php?page=' . ($page - 1) . '" aria-controls="zero_config" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>';
+							echo '<li  class="paginate_button page-item previous" id="zero_config_previous"><a href="store.php?page=' . ($page - 1) . '" aria-controls="zero_config" data-dt-idx="0" tabindex="0" class="page-link"style="background-color: #bd2130;border-color: #bd2130!important;"  >Previous</a></li>';
 						}
 						for ($i = 1; $i < $total_pages; $i++) {
 							if ($i == $page) {
@@ -185,13 +175,12 @@ if(isset($_GET['add'])){
 <!-- ========================= SECTION CONTENT END// ========================= -->
 
 <!-- ========================= FOOTER ========================= -->
-
-<div class="container-fluied">
+    <!-- //////////////////footer -->
+    <div class="container-fluied">
     <!-- Footer -->
     <footer
-            class="text-center text-lg-start "
-            style="background: linear-gradient(to right,  #e558519a,#e46a6493, rgba(216, 112, 147, 0.215));"
-    
+            class="text-center text-lg-start text-primary"
+            style="background: linear-gradient(to right, rgba(216, 112, 147, 0.377),rgba(216, 112, 147, 0.235), rgba(216, 112, 147, 0.087));"           
             >
       <!-- Grid container -->
       <div class="container p-4 pb-0">
@@ -204,7 +193,7 @@ if(isset($_GET['add'])){
               <h6 class="text-uppercase mb-4 font-weight-bold">
                 Toys Shop
               </h6>
-              <p style= "text-align: justify; ">
+              <p>
                 Toys shop has announced that Toys store is opening , its separate platform that provides The most distinctive games that the child spends his time enjoying and learning, has amassed more than 35 million customers.
               </p>
             </div>
@@ -213,21 +202,21 @@ if(isset($_GET['add'])){
             <hr class="w-100 clearfix d-md-none" />
   
             <!-- Grid column -->
-            <!-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">Categores</h6>
               <p >
-                <a class="text">Electronic Toys</a>
+                <a class="text-primary">Electronic Toys</a>
               </p>
               <p>
-                <a class="text-">Crative Toys</a>
+                <a class="text-primary">Crative Toys</a>
               </p>
               <p>
-                <a class="text">Educational Toys</a>
+                <a class="text-primary">Educational Toys</a>
               </p>
               <p>
-                <a class="text" >Dolls Toys</a>
+                <a class="text-primary" >Dolls Toys</a>
               </p>
-            </div> -->
+            </div>
             <!-- Grid column -->
   
             <hr class="w-100 clearfix d-md-none" />
@@ -307,7 +296,12 @@ if(isset($_GET['add'])){
     </footer>
     <!-- Footer -->
 
+<!-- ========================= FOOTER END // ========================= -->
 
+
+<script>
+$("input[type='number']").inputSpinner()
+</script>
     
 </body>
 </html>

@@ -163,8 +163,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_close($conn);
         }  else{
             // URL doesn't contain id parameter. Redirect to error page
-            // header("location: error.php");
-          
+            header("location: error.php");
             exit();
         }
     }
@@ -193,25 +192,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
 <div class="navbar">
-        <div class="logo"><img src="../img/logo_kids.gif"width="100px"> </div>
-       
-        <nav style="font-family: 'Nunito', sans-serif;
- font-family: 'Patrick Hand', cursive;">
- <ul style="margin-right: 5%; font-family: 'Nunito', sans-serif;
- font-family: 'Patrick Hand', cursive;">
- <li><a href="../index.html">Home</a></li>
- <li><a href="../product/product.php">Products</a></li>
- <li><a href="../Welcome/ContactUs.html">Contact Us</a></li>
- <li><a href="../Welcome/AboutUs.html">About US</a></li>
+       <div class="logo"><img src="../img/logo_kids.gif"width="100px"> </div>
+       <nav >
+<ul style="margin-right: 5%; font-family: 'Nunito', sans-serif;
+font-family: 'Patrick Hand', cursive; color:black;">
+ <li><a style="color:black;" href="../index.php">Home</a></li>
+ <li><a style="color:black;" href="../product/product.php">Products</a></li>
+ <li><a style="color:black;" href="../Welcome/ContactUs.html">Contact Us</a></li>
+ <li><a style="color:black;" href="../Welcome/AboutUs.html">About US</a></li>
  
- <li><a href="../Login/Login.php">Login</a></li>
- <li><a href="../Regestration/Signup.php">Sign Up</a></li>
- <li><a href="../User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
- <li><a href=""><img style="position:absolute; margin-top:-2.5%; width:4%" src="../img/cart2.png" ></a></li>
+ <li><a style="color:black;" href="../Login/Login.php">Login</a></li>
+ <li><a style="color:black;" href="../Regestration/Signup.php">Sign Up</a></li>
+ <li><a style="color:black;" href="../User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+ <li><a style="color:black;" href="../Cart/cart.php"><i class="fas fa-shopping-cart"></i ></i></a></li>
 
- </ul> <hr style="width:70%; margin-left: 31%;">
-        </nav>
-     </div>
+</ul> <hr style="width:70%; margin-left: 31%;">
+       </nav>
+
+    </div>
     <div class="wrapper">
         <div class="container-fluid">
         

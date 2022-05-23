@@ -2,6 +2,26 @@
 
 include_once '../Configration/connection.php';
 
+if (!isset($_GET['id'])) {
+  $homepath = '../index.html';
+  $prodpath = '../product.php';
+  $check= '../checkout/checkout.php' ;
+  $shoppath = '../product.php';
+  $cartpath = '../Cart/cart.php';
+  $uuser= '../User/User.php';
+  $about='../Welcome/AboutUs.html';
+  $cont='../Welcome/ContactUs.html';
+  }else{
+    $sign = $_GET['id'];
+    $homepath = '../index.html?id=' . $sign;
+    $shoppath = '../product.php?id=' . $sign;
+    $cartpath = '../Cart/cart.php?id=' . $sign;
+    $uuser= '../User/User.php?id=' . $sign ;
+    $check= '../checkout/checkout.php?id=' . $sign ;
+    $about='../Welcome/AboutUs.html?id='. $sign ;
+    $cont='../Welcome/ContactUs.html?id='. $sign ;
+  }
+
 
 if(isset($_GET['add'])){
   $quantity=$_GET['quantity'];
@@ -37,43 +57,35 @@ if(isset($_GET['add'])){
 </head>
 <body>
 <div class="navbar">
-        <div class="logo"><img src="../img/logo_kids.gif"width="80px"> </div>
-       
-        <nav style="font-family: 'Nunito', sans-serif;
- font-family: 'Patrick Hand', cursive;">
- <ul style="margin-right: 5%; font-family: 'Nunito', sans-serif;
- font-family: 'Patrick Hand', cursive;">
- <li ><a style="color:black;"  href="../index.html">Home</a></li>
- <li><a style="color:black" href="../product/product.php">Products</a></li>
- <li><a style="color:black" href="../Welcome/ContactUs.html">Contact Us</a></li>
- <li><a style="color:black" href="../Welcome/AboutUs.html">About US</a></li>
+       <div class="logo"><img src="../img/logo_kids.gif"width="100px"> </div>
+       <nav >
+<ul style="margin-right: 5%; font-family: 'Nunito', sans-serif;
+font-family: 'Patrick Hand', cursive; color:black;">
+ <li><a style="color:black;" href="../index.html">Home</a></li>
+ <li><a style="color:black;" href="../product/product.php">Products</a></li>
+ <li><a style="color:black;" href="../Welcome/ContactUs.html">Contact Us</a></li>
+ <li><a style="color:black;" href="../Welcome/AboutUs.html">About US</a></li>
  
- <li><a style="color:black" href="../Login/Login.php">Login</a></li>
- <li><a style="color:black" href="../Regestration/Signup.php">Sign Up</a></li>
- <li><a style="color:black" href="../User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
- <li><a style="color:black" href="../Cart/cart.php"><img style="position:absolute; margin-top:-2.5%; width:4%" src="../img/cart2.png" ></a></li><br><br>
-<li><select class="custom-select custom-select-sm mb-3">
-    
-		
- </select></li>
- </ul> <hr style="width:70%; margin-left: 31%;">
-        </nav>
-     </div>
+ <li><a style="color:black;" href="../Login/Login.php">Login</a></li>
+ <li><a style="color:black;" href="../Regestration/Signup.php">Sign Up</a></li>
+ <li><a style="color:black;" href="../User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+ <li><a style="color:black;" href="../Cart/cart.php"><i class="fas fa-shopping-cart"></i ></i></a></li>
 
-</ul>
+</ul> <hr style="width:70%; margin-left: 31%;">
        </nav>
+
     </div>
     <br><br><br>
 <section class="section-content ml">
-    <div class="container">
+    <div class="container-fluied">
 
         <div class="row" style="justify-content: center!important;">
-            <main class="col-md-12">
+            <main class="col-md-9">
 
                 <div class="row" >
                     <?php
 
-							$limit = 12;
+							$limit = 9;
 
 							if (isset($_GET['page'])) {
 								$page = $_GET['page'];
@@ -89,7 +101,7 @@ if(isset($_GET['add'])){
 								while ($row = mysqli_fetch_assoc($product_result)) {
 							?>
 
-                    <div class="col-md-3">  
+                    <div class="col-md-4">  
                         <!-- cart.php?id=<?php echo $row["product_id"]; ?>###################################################### -->
                         <form action="" method="GET">
                             <figure class="card card-product-grid">
@@ -128,7 +140,7 @@ if(isset($_GET['add'])){
                                             <!-- <input type="hidden" name="id_user"> -->
                                     <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
                                     <!----------------------------- change the color of the buttons 21-5-2022 at 6:22pm ------------------------>
-                                    <input type="submit" name="add" class="btn-warning " value="Add to cart">
+                                    <input type="submit" name="add" class="btn-warning btn-info" value="Add to cart">
                                 </figcaption>
                             </figure>
                         </form>
@@ -185,9 +197,130 @@ if(isset($_GET['add'])){
     </div> <!-- container .//  -->
 </section>
 <!-- ========================= SECTION CONTENT END// ========================= -->
-<?php
-include('../footer.html')
-?>
+
+<!-- ========================= FOOTER ========================= -->
+    <!-- //////////////////footer -->
+    <div class="container-fluied">
+    <!-- Footer -->
+    <footer
+            class="text-center text-lg-start text-primary"
+            style="background: linear-gradient(to right, rgba(216, 112, 147, 0.377),rgba(216, 112, 147, 0.235), rgba(216, 112, 147, 0.087));"           
+            >
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                Toys Shop
+              </h6>
+              <p>
+                Toys shop has announced that Toys store is opening , its separate platform that provides The most distinctive games that the child spends his time enjoying and learning, has amassed more than 35 million customers.
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Categores</h6>
+              <p >
+                <a class="text-primary">Electronic Toys</a>
+              </p>
+              <p>
+                <a class="text-primary">Crative Toys</a>
+              </p>
+              <p>
+                <a class="text-primary">Educational Toys</a>
+              </p>
+              <p>
+                <a class="text-primary" >Dolls Toys</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Contact Us</h6>
+              <p><i class="fas fa-home mr-3"></i> Aqaba , Jordan</p>
+              <p><i class="fas fa-envelope mr-3"></i> info@mail.com</p>
+              <p><i class="fas fa-phone mr-3"></i> +960 7710101010</p>
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+  
+              <!-- linkedin majd -->
+              <a
+                 class="btn btn-primary btn-floating m-1"
+                 style="background-color: #3b5998"
+                 href="#!"
+                 role="button"
+                 ><i class="fab fa-facebook-f"></i
+                ></a>
+  
+              
+  
+              <!-- github samer -->
+              <a
+                 class="btn btn-primary btn-floating m-1"
+                 style="background-color: #dd4b39"
+                 href="#!"
+                 role="button"
+                 ><i class="fab fa-google"></i
+                ></a>
+  
+              
+                    <br>
+              <!-- Linkedin -->
+              <a
+                 class="btn btn-primary btn-floating m-1"
+                 style="background-color: #0082ca"
+                 href="https://www.linkedin.com/in/tamara-al-shabatat-060452123/?challengeId=AQFBHTafIZQKgAAAAYAhs1i-oKYMHGzoCp7CFeBZxbEnPZafk74JDnX6xmEwh0tDvN3Eq6-LHqiH4WRl2oxvFyTOX64Dyzv3lQ&submissionId=3ffc26ce-3a62-e516-90b4-716d0cbeeb40"
+                 role="button" target="_blank"
+                 ><i class="fab fa-linkedin-in"></i
+                ></a>
+              <!-- Github -->
+              <a
+                 class="btn btn-primary btn-floating m-1"
+                 style="background-color: #333333"
+                 href="https://github.com/majdalbalawneh"
+                 role="button" target="_blank"
+                 ><i class="fab fa-github"></i
+                ></a>
+            </div>
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+  
+      <!-- Copyright -->
+      <div
+           class="text-center p-3"
+           style="background-color: rgba(0, 0, 0, 0.2)"
+           >
+        MST<sup>2</sup>&nbsp; © 2022 Copyright:
+        <a  href="https://www.orange.jo/ar/pages/default.aspx" target="_blank">Orange.jo</a> 
+          
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+<!-- ========================= FOOTER END // ========================= -->
 
 
 <script>

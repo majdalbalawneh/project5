@@ -3,6 +3,15 @@ include_once '../Configration/connection.php';
 include_once './function.inc.php';
 date_default_timezone_set("Asia/Amman");
 
+
+if(isset($_GET['add'])){
+    $quantity=$_GET['quantity'];
+      $add_id = $_GET['add'];
+      $adding="INSERT INTO `cart`( `quantity`) VALUES ('$quantity');";
+      mysqli_query($conn,$adding);
+  
+};
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,18 +90,16 @@ font-family: 'Patrick Hand', cursive;">
             <div class="row no-gutters">
                 <?php
                ##########################################################################
-                $product_query = "SELECT * FROM `products` WHERE product_id =$_GET[id]";
+                $product_query = "SELECT * FROM `products` WHERE product_id =$_GET[id];";
                 $product_result = mysqli_query($conn, $product_query);
                 if (mysqli_num_rows($product_result) > 0) {
                     while ($row = mysqli_fetch_assoc($product_result)) {
                 ?>
                         <aside class="col-md-6">
-                            <form action="cart.php?action=add&id=<?php echo $row["product_id"]; ?>" method="POST">
+                            <form  method="GET">
                                  <div class="img-big-wrap">
                                         <img src="<?php echo $row['img']; ?>" style= "width:92%; height:80%; margin-left:3%;" >
                                     </div> <!-- img-big-wrap.// -->
-
-                                
                         </aside>
                         <main class="col-md-6 border-left">
                             <article style="padding:3rem ;" class="content-body">
@@ -113,7 +120,7 @@ font-family: 'Patrick Hand', cursive;">
                                 <input type="hidden" name="hidden_product_name" value="<?php echo $row["product_name"]; ?>">
                                 <input type="hidden" name="hidden_img" value="<?php echo $row["img"]; ?>">
                                 <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
-                                <input style="background-color:#e55951 ; height:3rem; font-size:larger;color:white; margin-left:5%;" type="submit" name="add" class="btn btn-block" value="Added to cart">
+                                <input style="background-color:#e55951 ; height:3rem; font-size:larger;color:white; margin-left:5%;" type="submit" name="add" class="btn btn-block" value="Add to cart">
                             </article> <!-- product-info-aside .// -->
                            
                         <!-- col.// -->
@@ -142,7 +149,7 @@ font-family: 'Patrick Hand', cursive;">
 </div>
         </div></div></section>
 <!-- ...................................... -->
-<div class="container-fluied>
+<div class="container-fluied">
 <footer class="text-center text-lg-start container-fluied "
             style="background: linear-gradient(to right,  #e558519a,#e46a6493, rgba(216, 112, 147, 0.215));" >
       <!-- Grid container -->

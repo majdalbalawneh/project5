@@ -98,7 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         VALUES ('$fname', '$sname','$lname', '$dob' ,  '$phone','$email', '$pass' , '$con_pass');";
          
          if(mysqli_query($conn, $sql)){
-            header("location:Admin.php");
+            header("location:../Login/logiin.php");
             }else{
             echo "Eroor: ". $sql."<br>". mysqli_error($conn);}}
     else{
@@ -134,8 +134,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="mt-5">Create Record</h2>
-                    <p>Please fill this form and submit to add employee record to the database.</p>
+                    <h2 class="mt-5">Sign up</h2>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
                             <label>First Name</label>

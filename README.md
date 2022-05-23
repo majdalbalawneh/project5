@@ -21,8 +21,8 @@ After We Learn Set of Topics Like:
 4. PHP
 5. MySql
 6. BOOTSTRAP
-7. Git
-9. Pedagogie active
+7. Github
+8. Pedagogie active
 
 
 I'm DO IT!
@@ -31,7 +31,7 @@ Build an e-commerce web application using PHP and MYSQL
 
 ## Project Overview
 
-Build E-commerce website using using PHP and MYSQL. The user can add /delete product to carts and make payment,  also can edit his data for the products and add them into the cart.
+Build E-commerce "KIDS TOYS store" for kids toys in 4 categories (dolls , creative , educational , electronic) website using using PHP and MYSQL. The user can add /delete product to carts and make payment,  also can edit his data for the products and add them into the cart.
 Project contain admin dashboard; admin can add / update / delete :  users, products, categories.
 
 ## Important Links
@@ -47,13 +47,7 @@ Project contain admin dashboard; admin can add / update / delete :  users, produ
    * [Mockup PDF](media//present.pptx)
 
 4. Project Folder
-   * [Repo Link](https://github.com/majdalbalawneh/project5)
+   * [Repo Link](https://github.com/tamara126enad/PHP_store)
 
 5. Trello Board
    * [Live Link](https://trello.com/invite/b/qLnips4y/cfeab4ca32bfdee94aeeac0fae626b37/project5)
-GitHub
-GitHub - tamara126enad/PHP_store
-Contribute to tamara126enad/PHP_store development by creating an account on GitHub.
-
-Trello
-Organize anything, together. Trello is a collaboration tool that organizes your projects into boards. In one glance, know what's being worked on, who's working on what, and where something is in a process.

@@ -8,7 +8,12 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+
+    <link rel="stylesheet" href="product.css">
     <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <style>
         .wrapper{
@@ -27,24 +32,21 @@
 </head>
 <body>
 <div class="navbar">
-        <div class="logo"><img src="../img/logo_kids.gif"width="100px"> </div>
-       
-        <nav style="font-family: 'Nunito', sans-serif;
- font-family: 'Patrick Hand', cursive;">
- <ul style="margin-right: 5%; font-family: 'Nunito', sans-serif;
- font-family: 'Patrick Hand', cursive;">
- <li><a href="../index.html">Home</a></li>
- <li><a href="../product/product.php">Products</a></li>
- <li><a href="../Welcome/ContactUs.html">Contact Us</a></li>
- <li><a href="../Welcome/AboutUs.html">About US</a></li>
-<!--  
- <li><a href="../Login/Login.php">Login</a></li>
- <li><a href="../Regestration/Signup.php">Sign Up</a></li> -->
- <li><a href="../User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
- <li><a href=""><img style="position:absolute; margin-top:-2.5%; width:4%" src="../img/cart2.png" ></a></li>
+       <div class="logo"><img src="../img/logo_kids.gif"width="90px"> </div>
+       <nav >
+<ul style="margin-right: 5%; font-family: 'Nunito', sans-serif;
+font-family: 'Patrick Hand', cursive; color:black;">
+ <li><a style="color:black;" href="../index.php">Home</a></li>
+ <li><a style="color:black;" href="../product/product.php">Products</a></li>
+ <li><a style="color:black;" href="../Welcome/ContactUs.html">Contact Us</a></li>
+ <li><a style="color:black;" href="../Welcome/AboutUs.html">About US</a></li>
+ <li><a style="color:black;" href="../User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+ <li><a style="color:black;" href="../Cart/cart.php"><i class="fas fa-shopping-cart"></i ></i></a></li>
 
- </ul> <hr style="width:70%; margin-left: 31%;">
-        </nav>
+</ul> <hr style="width:70%; margin-left: 31%;">
+       </nav>
+
+    
      </div>
         <div class="container">
             <div class="row">
@@ -57,7 +59,6 @@
                     // Include config file
                     include_once '../Configration/connection.php';
                     $email= $_SESSION['email'];
-                    
                     // Attempt select query execution
                     $sql ="SELECT * FROM register WHERE  Email='$email'; ";
                     if($result = mysqli_query($conn, $sql)){
@@ -81,7 +82,7 @@
                                 echo "</thead>";
                                 echo "<tbody>";
                                 while($row = mysqli_fetch_array($result)){
-                                 
+
                                     echo "<tr>";
                                         echo "<td>" . $row['id'] . "</td>";
                                         echo "<td>" . $row['First_Name'] . "</td>";
@@ -94,7 +95,7 @@
                                         echo "<td>" . $row['con_Password'] . "</td>";
 
                                         echo "<td>";
-                                            echo '<a href="Update_info.php?id='. $row['id'] .'" style="text_align:center"class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
+                                            echo '<a href="Update_info.php?id='. $row['id'] .'" style="text_align:center"class="mr-3" title="Update Record" data-toggle="tooltip">&#x270E;</a>';
                                         echo "</td>";
                                     echo "</tr>";
                                 }
@@ -118,10 +119,9 @@
                 </div>
             <div class="container-fluied">
    <!-- Footer -->
-   <footer
-            class="text-center text-lg-start text-primary"
-            style="background: linear-gradient(to right, rgba(216, 112, 147, 0.377),rgba(216, 112, 147, 0.235), rgba(216, 112, 147, 0.087));"           
-            >
+   <div class="container-fluied">
+<footer class="text-center text-lg-start container-fluied "
+            style="background: linear-gradient(to right,  #e558519a,#e46a6493, rgba(216, 112, 147, 0.215));" >
       <!-- Grid container -->
       <div class="container p-4 pb-0">
         <!-- Section: Links -->
@@ -133,7 +133,7 @@
               <h6 class="text-uppercase mb-4 font-weight-bold">
                 Toys Shop
               </h6>
-              <p>
+              <p style= "text-align: justify; ">
                 Toys shop has announced that Toys store is opening , its separate platform that provides The most distinctive games that the child spends his time enjoying and learning, has amassed more than 35 million customers.
               </p>
             </div>
@@ -142,21 +142,21 @@
             <hr class="w-100 clearfix d-md-none" />
   
             <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <!-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">Categores</h6>
               <p >
-                <a class="text-primary">Electronic Toys</a>
+                <a class="text">Electronic Toys</a>
               </p>
               <p>
-                <a class="text-primary">Crative Toys</a>
+                <a class="text-">Crative Toys</a>
               </p>
               <p>
-                <a class="text-primary">Educational Toys</a>
+                <a class="text">Educational Toys</a>
               </p>
               <p>
-                <a class="text-primary" >Dolls Toys</a>
+                <a class="text" >Dolls Toys</a>
               </p>
-            </div>
+            </div> -->
             <!-- Grid column -->
   
             <hr class="w-100 clearfix d-md-none" />
@@ -188,26 +188,11 @@
   
               
   
-              <!-- github samer -->
-              <a
-                 class="btn btn-primary btn-floating m-1"
-                 style="background-color: #dd4b39"
-                 href="#!"
-                 role="button"
-                 ><i class="fab fa-google"></i
-                ></a>
+              
   
               
                     <br>
-              <!-- Linkedin -->
-              <a
-                 class="btn btn-primary btn-floating m-1"
-                 style="background-color: #0082ca"
-                 href="https://www.linkedin.com/in/tamara-al-shabatat-060452123/?challengeId=AQFBHTafIZQKgAAAAYAhs1i-oKYMHGzoCp7CFeBZxbEnPZafk74JDnX6xmEwh0tDvN3Eq6-LHqiH4WRl2oxvFyTOX64Dyzv3lQ&submissionId=3ffc26ce-3a62-e516-90b4-716d0cbeeb40"
-                 role="button" target="_blank"
-                 ><i class="fab fa-linkedin-in"></i
-                ></a>
-              <!-- Github -->
+              
               <a
                  class="btn btn-primary btn-floating m-1"
                  style="background-color: #333333"
@@ -228,12 +213,14 @@
            class="text-center p-3"
            style="background-color: rgba(0, 0, 0, 0.2)"
            >
-        MST<sup>2</sup>&nbsp; © 2022 Copyright:
+        MST<sup>2</sup>&nbsp; Â© 2022 Copyright:
         <a  href="https://www.orange.jo/ar/pages/default.aspx" target="_blank">Orange.jo</a> 
           
       </div>
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
+</div>
 </body>
+
 </html>
