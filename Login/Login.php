@@ -33,7 +33,7 @@ if (isset($_GET['submit'])){
     }   
     
     if($loginEmail_correct && $loginPassword_correct){
-        header('location:../index.php');
+        header('location:index.php');
       
         $row['last-login']= date("d-m-Y - h:i:sa");
         
@@ -58,7 +58,7 @@ if (isset($_GET['submit'])){
 		$adminEmail_correct=false;
 	}
 	if ($adminEmail_correct && $adminPass_correct ){
-		header('location:../index.php');
+		header('location:index.php');
 	}
 }
 ?>

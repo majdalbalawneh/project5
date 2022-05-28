@@ -85,7 +85,10 @@ if(isset($_POST['order_btn'])){
    <div class="display-order">
       <?php
         $sql1="SELECT * FROM cart INNER JOIN products ON products.product_id=cart.product_id";
+      //   $sql2="SELECT * FROM register INNER JOIN cart ON cart.id=register.id";
          $select_cart = mysqli_query($conn, $sql1);
+         //  mysqli_query($conn, $sql2);
+
          $total = 0;
          $grand_total = 0;
          if(mysqli_num_rows($select_cart) > 0){
@@ -93,7 +96,7 @@ if(isset($_POST['order_btn'])){
             $total_price = number_format($row['price'] * $row['quantity']);
             $grand_total = $total += $total_price;
       ?>
-      <span><?= $row['product_name']; ?>(<?= $row['quantity']; ?>)</span>
+      <span><?= $row['product_name']; ?>  (<?= $row['quantity']; ?>)</span>
       <?php
          }
       }else{
@@ -106,15 +109,15 @@ if(isset($_POST['order_btn'])){
       <div class="flex">
          <div class="inputBox">
             <span>your name</span>
-            <input type="text" placeholder="enter your name" name="name" required>
+            <input type="text" value="<?php #echo $row['First_Name']; ?>" name="name" required>
          </div>
          <div class="inputBox">
             <span>your phone number</span>
-            <input type="number" placeholder="enter your phone number" name="number" required>
+            <input type="number"  value="<?php #echo $row['Phone_Num']; ?>" name="number" required>
          </div>
          <div class="inputBox">
             <span>your email</span>
-            <input type="email" placeholder="enter your email" name="email" required>
+            <input type="email"  value="<?php #echo $row['Email']; ?>" name="email" required>
          </div>
          <div class="inputBox">
             <span>payment method</span>

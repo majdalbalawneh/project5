@@ -1,9 +1,9 @@
 <?php
   session_start();
-  if(!empty($_SESSION['email'])){
-    echo "<style> .restrict{display:none;} </style>";
+  // if(!empty($_SESSION['email'])){
+  //   echo "<style> .restrict{display:none;} </style>";
   
-  }else{echo "<style> .restrict{display:block;} </style>";}
+  // }else{echo "<style> .restrict{display:block;} </style>";}
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,8 +29,8 @@
     integrity=”sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm” crossorigin=”anonymous”>
 
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="Welcome/style1.css">
-  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="../Welcome/style1.css">
+  <link rel="stylesheet" href="../style2.css">
 
 
 </head>
@@ -42,19 +42,18 @@ font-family: 'Patrick Hand', cursive;">
     <div class="land-container">
 
       <div class="navbar">
-        <div class="logo"><img src="./img/logo_kids.gif" width="90px"> </div>
+        <div class="logo"><img src="../img/logo_kids.gif" width="90px"> </div>
 
         <nav>
           <ul style="margin-right: 5%; font-family: 'Nunito', sans-serif;
 font-family: 'Patrick Hand', cursive; ">
-            <li><a href="./index.php">Home</a></li>
-            <li><a href="./product/product.php">Products</a></li>
-            <li><a href="./Welcome/ContactUs.html">Contact Us</a></li>
-            <li><a href="./Welcome/AboutUs.html">About US</a></li>
-            <li class="restrict1"><a href="./Login/Login.php">Login</a></li>
-            <li class="restrict2"><a href="./Regestration/Signup.php">Sign Up</a></li>
-            <!-- <li id="restrict3"><a href="../User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li> -->
-            <!-- <li><a href="./Cart/cart.php"><i class="fas fa-shopping-cart"></i></i></a></li> -->
+            <li><a href="">Home</a></li>
+            <li><a href="../product/product.php">Products</a></li>
+            <li><a href="../Welcome/ContactUs.html">Contact Us</a></li>
+            <li><a href="../Welcome/AboutUs.html">About US</a></li>
+            <li id="restrict3"><a href="../User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li> 
+             <li><a href="../Cart/cart.php"><i class="fas fa-shopping-cart"></i></i></a></li>
+           
           </ul>
           <hr style="width:70%; margin-left: 31%;">
         </nav>
@@ -69,7 +68,7 @@ font-family: 'Patrick Hand', cursive; ">
             a type specimen book. It has survived not only five</p>
         </div>
         <div class="l-word">
-          <img src="./img/baby-store-hero-baby-img.png">
+          <img src="../img/baby-store-hero-baby-img.png">
 
         </div>
       </div>
@@ -99,7 +98,7 @@ font-family: 'Patrick Hand', cursive; ">
                     <div class="wgh-slider-item">
                       <div class="wgh-slider-item__inner">
                         <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image"
-                            src="img/image-1.jpg" alt="TGirls Play Kitchens" />
+                            src="../img/image-1.jpg" alt="TGirls Play Kitchens" />
                           <figcaption class="wgh-slider-item-figure__caption"><a
                               href="https://f4.bcbits.com/img/a3905613628_16.jpg">Girls Play Kitchens</a><span>27
                               JD</span></figcaption>
@@ -110,7 +109,7 @@ font-family: 'Patrick Hand', cursive; ">
                     <div class="wgh-slider-item">
                       <div class="wgh-slider-item__inner">
                         <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image"
-                            src="img/image-2.jpg" alt="Disney Car Toys" />
+                            src="../img/image-2.jpg" alt="Disney Car Toys" />
                           <figcaption class="wgh-slider-item-figure__caption"><a
                               href="https://f4.bcbits.com/img/a3905613628_16.jpg">Disney Car Toys</a><span>15 JD</span>
                           </figcaption>
@@ -121,7 +120,7 @@ font-family: 'Patrick Hand', cursive; ">
                     <div class="wgh-slider-item">
                       <div class="wgh-slider-item__inner">
                         <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image"
-                            src="img/image-3.jpg" alt="Kids' Electric Vehicles" />
+                            src="../img/image-3.jpg" alt="Kids' Electric Vehicles" />
                           <figcaption class="wgh-slider-item-figure__caption"><a
                               href="https://f4.bcbits.com/img/a3905613628_16.jpg">Kids' Electric Vehicles</a><span>140
                               JD</span></figcaption>
@@ -132,7 +131,7 @@ font-family: 'Patrick Hand', cursive; ">
                     <div class="wgh-slider-item">
                       <div class="wgh-slider-item__inner">
                         <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image"
-                            src="img/image-4.jpg" alt="block building set" />
+                            src="../img/image-4.jpg" alt="block building set" />
                           <figcaption class="wgh-slider-item-figure__caption"><a
                               href="https://f4.bcbits.com/img/a3905613628_16.jpg">block building set</a><span>80
                               JD</span></figcaption>
@@ -143,7 +142,7 @@ font-family: 'Patrick Hand', cursive; ">
                     <div class="wgh-slider-item">
                       <div class="wgh-slider-item__inner">
                         <figure class="wgh-slider-item-figure"><img class="wgh-slider-item-figure__image"
-                            src="img/image-5.jpg" alt="smart blocks toys" />
+                            src="../img/image-5.jpg" alt="smart blocks toys" />
                           <figcaption class="wgh-slider-item-figure__caption"><a
                               href="https://picsum.photos/id/237/480/480">smart blocks toys</a><span>24 JD</span>
                           </figcaption>
@@ -171,21 +170,21 @@ font-family: 'Patrick Hand', cursive; ">
       <div class="l-row-2">
         <div class="l-word-2">
 
-          <a href="./product/product.php"> <img src="./img/image-4.jpg" alt="img category" width="500em;">
+          <a href="./product/product.php"> <img src="../img/image-4.jpg" alt="img category" width="500em;">
             <h3 style="text-align:center; color:orangered;">Electronic Toys</h3>
         </div>
         <div class="l-word-2"></a>
 
-          <a href="./product/product.php"><img src="./img/image-6.jpg" alt="img category">
+          <a href="./product/product.php"><img src="../img/image-6.jpg" alt="img category">
             <h3 style="text-align:center ; color:darkblue;">Crative Toys</h3>
           </a>
         </div>
         <div class="l-word-2"></a>
-          <a href="./product/product.php"><img src="./img/image-1.jpg" alt="img category">
+          <a href="./product/product.php"><img src="../img/image-1.jpg" alt="img category">
             <h3 style="text-align:center ; color:yellowgreen;">Educational Toys</h3>
         </div>
         <div class="l-word-2"></a>
-          <a href="./product/product.php"><img src="./img/image-3.jpg" alt="img category">
+          <a href="./product/product.php"><img src="../img/image-3.jpg" alt="img category">
             <h3 style="text-align:center ; color:palevioletred;">Dolls Toys</h3>
         </div></a>
 
@@ -199,16 +198,16 @@ font-family: 'Patrick Hand', cursive; ">
   <div class="l-discount " style="text-align:center">
 
     <div class="l-word-discount ">
-      <img src="./img/sale1_1.gif" width="3%">
+      <img src="../img/sale1_1.gif" width="3%">
 
     </div>
     <div style="margin-top:3% ;" class="l-word-discount ">
       <h1>We have special discounts. Do not miss it !<br>
-        Let's shop now.</h1> <a href="product/product.php" class=" btn-dicount ">click here</a>
+        Let's shop now.</h1> <a href="../product/product.php" class=" btn-dicount ">click here</a>
 
       <br><br>
       <?php
-   include_once './Configration/connection.php';
+   include_once '../Configration/connection.php';
 
   $sql = "SELECT * FROM products WHERE code='MST2';";
   if($result = mysqli_query($conn, $sql)){
@@ -221,7 +220,7 @@ font-family: 'Patrick Hand', cursive; ">
           <form action="" method="GET">
             <figure class="card card-product-grid">
               <div class="img-wrap" style="text-align:center">
-                <img style="width:200px" src="<?php echo $row['discount'];?>">
+                <img style="width:200px" src="<?php echo $row['img'];?>">
                 <!-- ################################################### -->
                 <label>
                   <?php
@@ -234,7 +233,7 @@ font-family: 'Patrick Hand', cursive; ">
               </div>
               <figcaption class="info-wrap">
                 <div class="fix-height" style="text-align:center">
-                  <a href="product/singleproduct.php?id=<?php echo $row['product_id']; ?>" class="title">
+                  <a href="../product/singleproduct.php?id=<?php echo $row['product_id']; ?>" class="title">
                     <?php echo $row['product_name']; ?>
                   </a>
 

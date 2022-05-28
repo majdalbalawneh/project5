@@ -1,5 +1,9 @@
 <?php
   session_start();
+  if(empty($_SESSION['email'])){
+    echo "<style> #restrict{display:none;} </style>";
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +24,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style2.css">
 </head>
-
 <body>
 <div class="navbar">
         <div class="logo"><img src="../img/logo_kids.gif" width="90px"> </div>
@@ -33,8 +36,8 @@ font-family: 'Patrick Hand', cursive; ">
             <li><a href="../Welcome/ContactUs.html">Contact Us</a></li>
             <li><a href="../Welcome/AboutUs.html">About US</a></li>
             <li><a href="../User/User.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-            <li><a href="../Cart/cart.php"><i class="fas fa-shopping-cart"></i></i></a></li>
-
+            <li id="restrict"><a href="../Cart/cart.php"><i class="fas fa-shopping-cart"></i></i></a></li>
+            <li><?php echo '<br><br> <a href="../index.php"><input style="margin-left:78%" class="custom-btn btn-5" type="button" name="logout" value="LOGOUT"></a>'; ?></li>
           </ul>
           <hr style="width:70%; margin-left: 31%;">
         </nav>
