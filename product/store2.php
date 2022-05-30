@@ -116,7 +116,7 @@ if(isset($_GET['add'])){
   <li style="padding-top:20px;" ><a href="../product/store2.php">Electronic Toys</a></li>
 </ul>
   <h1 style="margin-left:40%;margin-top:-23% ">Educational Toys</h1>
-<section class="section-content ml" style="margin-top:-18%">
+<section class="section-content ml" style="margin-top:-15%">
     <div class="container-fluied">
 
         <div class="row" style="justify-content: center!important;">
@@ -130,7 +130,7 @@ if(isset($_GET['add'])){
 							if (isset($_GET['page'])) {
 								$page = $_GET['page'];
 							} else {
-								$page = 2;
+								$page = 3;
 							}
 							$offset = ($page - 1) * $limit;
 							$record_index = ($page - 1) * $limit;
@@ -215,10 +215,10 @@ if(isset($_GET['add'])){
 							} else {
 								$active = "";
 							}
-							echo '<li class="paginate_button page-item ' . $active . '"><a href="store2.php?page=' . $i . '" aria-controls="zero_config"  class="page-link">' . $i . '</a></li>';
+							echo '<li class="paginate_button page-item ' . $active . '"><a href="store.php?page=' . $i . '" aria-controls="zero_config"  class="page-link">' . $i . '</a></li>';
 						}
 						if ($total_pages > $page) {
-							echo '<li class="paginate_button page-item next" id="zero_config_next"><a href="store2.php?page=' . ($page + 1) . '" aria-controls="zero_config" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>';
+							echo '<li class="paginate_button page-item next" id="zero_config_next"><a href="store.php?page=' . ($page + 1) . '" aria-controls="zero_config" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>';
 						}
 						echo '</ul>';
 

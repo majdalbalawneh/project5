@@ -1,5 +1,6 @@
 <?php
 
+
 include_once '../Configration/connection.php';
 
 if(isset($_POST['order_btn'])){
@@ -69,7 +70,9 @@ if(isset($_POST['order_btn'])){
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="checkout.css">
-  
+  <style>
+     img{width: 60px; height: 60px;}
+  </style>
 
 </head>
 <body>
@@ -84,7 +87,7 @@ if(isset($_POST['order_btn'])){
 
    <div class="display-order">
       <?php
-        $sql1="SELECT * FROM cart INNER JOIN products ON products.product_id=cart.product_id";
+        $sql1="SELECT * FROM products  INNER JOIN cart ON products.product_id=cart.product_id";
       //   $sql2="SELECT * FROM register INNER JOIN cart ON cart.id=register.id";
          $select_cart = mysqli_query($conn, $sql1);
          //  mysqli_query($conn, $sql2);
@@ -96,28 +99,38 @@ if(isset($_POST['order_btn'])){
             $total_price = number_format($row['price'] * $row['quantity']);
             $grand_total = $total += $total_price;
       ?>
-      <span><?= $row['product_name']; ?>  (<?= $row['quantity']; ?>)</span>
+      <span><?php echo"<img  src=".$row['img'].">" ; ?> <?= $row['product_name']; ?> (<?= $row['quantity']; ?>)</span>
       <?php
          }
       }else{
          echo "<div class='display-order'><span>your cart is empty!</span></div>";
       }
       ?>
-      <span class="grand-total" style="background-color: #e46a64e6;"> grand total : <?= $grand_total; ?> JD</span>
+      <span class="grand-total" style="background-color: #4D4545;"> grand total : <?= $grand_total; ?> JD</span>
    </div>
 
+
+   <?php  
+   //   $sql2="SELECT * FROM register INNER JOIN cart ON cart.id=register.id ";
+   //   $select_cart = mysqli_query($conn, $sql2);
+   //   $fn=$row['First_Name'];
+   //    echo $fn;
+      ?>
       <div class="flex">
          <div class="inputBox">
             <span>your name</span>
-            <input type="text" value="<?php #echo $row['First_Name']; ?>" name="name" required>
+            <!-- value="<?php #echo $row['First_Name']; ?>" -->
+            <input type="text"  name="name" placeholder="First Name" require>
          </div>
          <div class="inputBox">
             <span>your phone number</span>
-            <input type="number"  value="<?php #echo $row['Phone_Num']; ?>" name="number" required>
+            <!-- value="<?php #echo $row['Phone_Num']; ?>" -->
+            <input type="number"   name="number" placeholder="Phone number" require>
          </div>
          <div class="inputBox">
             <span>your email</span>
-            <input type="email"  value="<?php #echo $row['Email']; ?>" name="email" required>
+            <!-- value="<?php #echo $row['Email']; ?>" -->
+            <input type="email"   name="email" placeholder=" email" require>
          </div>
          <div class="inputBox">
             <span>payment method</span>
@@ -129,11 +142,11 @@ if(isset($_POST['order_btn'])){
         
          <div class="inputBox">
             <span>city</span>
-            <input type="text" placeholder="Aqapa" name="city" required>
+            <input type="text" placeholder="Aqapa" name="city" >
          </div>
          <div class="inputBox">
             <span>country</span>
-            <input type="text" placeholder="Jordan" name="country" required>
+            <input type="text" placeholder="Jordan" name="country" >
          </div>
          
       </div>

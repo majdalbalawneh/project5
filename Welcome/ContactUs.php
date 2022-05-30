@@ -1,9 +1,4 @@
-<?php  
-
-include_once '../Configration/connection.php';
-include_once './function.inc.php';
-date_default_timezone_set("Asia/Amman");
-
+<?php
 session_start();
 if(!empty($_SESSION['email'])){
   echo "<style> .restrict{display:none;} </style>";
@@ -12,15 +7,6 @@ if(!empty($_SESSION['email'])){
 }else{echo "<style> .restrict{display:inline;} </style>";
 echo "<style> .restrict1{display:none;} </style>";
 }
-
-if(isset($_GET['add'])){
-  $quantity=$_GET['quantity'];
-    $add_id = $_GET['add'];
-    $id=$_GET['id'];
-    $adding="INSERT INTO `cart`(`product_id`, `quantity`) VALUES ('$id','$quantity');";
-    mysqli_query($conn,$adding);
-
- }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,14 +14,17 @@ if(isset($_GET['add'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="../nav.css">
     <link rel="stylesheet" href="../index1.css">
 
-   
-     <title>Details</title>
+
+    <title>Contact Us</title>
 </head>
+
 <body>
 <div class="container-fluied">
         <!-- Navbar -->
@@ -108,75 +97,70 @@ if(isset($_GET['add'])){
     </div>
   </nav>
   <!-- Navbar -->
- <section class="section-content padding-y" style="margin-top:10%">
-    
-    <div class="container">
-
-        <div class="card">
-            <div class="row no-gutters">
-                <?php
-               ##########################################################################
-                $product_query = "SELECT * FROM `products` WHERE product_id =$_GET[id]";
-                $product_result = mysqli_query($conn, $product_query);
-                if (mysqli_num_rows($product_result) > 0) {
-                    while ($row = mysqli_fetch_assoc($product_result)) {
-                ?>
-                        <aside class="col-md-6">
-                            <form  method="GET">
-                                 <div class="img-big-wrap">
-                                        <img src="<?php echo $row['img']; ?>" style= "width:92%; height:80%; margin-left:3%;" >
-                                    </div> <!-- img-big-wrap.// -->
-                        </aside>
-                        <main class="col-md-6 border-left">
-                            <article style="padding:3rem ;" class="content-body">
-                                <h2 class="title" style= "color:darkred">Product name<?php echo $row['product_name']; ?></h2>
-
-                                <div class="mb-3">
-                                    <p style= "color:darkred"> Price: <?php echo $row['price']; ?> $</p>
-                                </div>
-
-                                <p><h4>Description:</h4> <?php echo $row['description']; ?></p>
-                                <div class="col">
-                                    <p class="card-text">Quantity:
-                                        <input type="number" min="1" max="25" name="quantity" class="form-control" value="1" style="width: 60px;">
-                                    </p>
-                                </div> <!-- col.// -->
+         
+    <section class="contact" id="contact" style="margin-top:5%">
+        <div class="container">
+            <div class="heading text-center">
+                <h2>Contact
+                    <span style="color:#e55951"> Us </span></h2>
+                <p>Stay In Touch</p>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="title">
+                        <h3 style="color:#e55951">Contact detail</h3>
+                    </div>
+                    <div class="content">
+                        <!-- Info-1 -->
+                        <div class="info">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h4 class="d-inline-block" style="color:#e55951; margin-top:-20%">Call Us :
                                 <br>
+                                <span>+12457836913 , +12457836913</span></h4>
+                        </div>
+                        <!-- Info-2 -->
+                        <div class="info">
+                            <i class="far fa-envelope"></i>
+                            <h4 class="d-inline-block" style="color:#e55951; margin-top:-20%">EMAIL Us :
+                                <br>
+                                <span> KidsToys@gmail.com</span></h4>
+                        </div>
+                        <!-- Info-3 -->
+                        <div class="info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h4 class="d-inline-block" style="color:#e55951 ; margin-top:-20%">ADDRESS :<br>
+                                <span>6743 last street , Abcd, Xyz</span></h4>
+                        </div>
+                    </div>
+                </div>
 
-                                <input type="hidden" name="hidden_product_name" value="<?php echo $row["product_name"]; ?>">
-                                <input type="hidden" name="id" value="<?php echo $row['product_id'] ?>">
-                                <input type="hidden" name="hidden_img" value="<?php echo $row["img"]; ?>">
-                                <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
-                                <input style="background-color:#e55951 ; height:3rem; font-size:larger;color:white; margin-left:3%;" type="submit" name="add" class="btn" value="Add to cart">
-                            </article> <!-- product-info-aside .// -->
-                           
-                        <!-- col.// -->
-                <?php  }
-                } else {
-                    echo "<h3>NO DATA FOUND.</h3>";
-                } 
-                ?>
-             </main>
-            </form> 
-            <br>   <br>   <br>     
-    <div class="container" style="margin-top:8% ; margin-left:54%; margin-bottom:5%">
-     <?php
+                <div class="col-md-7">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" placeholder="Subject">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="comment" placeholder="Message"></textarea>
+                        </div>
+                        <button class="btn btn-block" style="background-color:#e55951" type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
 
-    echo "<form  method='POST' action='".setComments($conn)."'>
-        <input type='hidden' value='User Comment :'>
-        <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
-        <textarea name='msg'  cols='30' rows='5'></textarea><br>
-        <button class='btn btn-info'  style='margin-top:2%;background-color:#e55951' 'type='submit' name='CommentSubmit' >Comment</button>
-    </form>" ;
-
-    GetComments($conn);
-    ?>
-
-    </div>
-</div>
-        </div></div></section>
-<!-- ...................................... -->
-        
+            <!--------------------- map section ----------------------->
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13882.352531894103!2d35.0057587!3d29.557486499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sjo!4v1652880476038!5m2!1sen!2sjo" width="100%" height="350px" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div> 
+        </div>
+    </section>
 <!-- Start Footer bottom Area -->
 <footer >
   <div class="footer-area-bottom">
@@ -218,7 +202,5 @@ if(isset($_GET['add'])){
     </div>
   </div>
 </footer>
-
-                
 </body>
 </html>
